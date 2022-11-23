@@ -23,7 +23,7 @@
     <!-- Inicio contenido -->
   
 
-<h3 class="text-center mt-5 pt-5">Vendedores</h3>
+<h3 class="text-center mt-5 pt-5">Empleados</h3>
     
     <div class="container d-flex  justify-content-center align-items-center ">
 
@@ -31,34 +31,37 @@
   <table class="table">
     <thead>
       <tr class="table-dark">
+        <th>Id</th>
         <th>Nombre</th>
         <th>Codigo</th>
-        <th>Producto</th>
-        <th>Número</th>
+        <th>Telefono</th>
+        <th>Curp</th>
+        <th> </th>
       </tr>
     </thead>
 
 <tbody>
 
 <?php
-        $connection = mysqli_connect("localhost", "root", "", "ventas");
+        //include '../DB/DB1.php';
+         include '../DB/Local.php';
         if($connection->connect_error){
             die("conexion fallda: ". $conn->connect_error);
         }
-        $sql = "SELECT * FROM vendedores";
+        $sql = "SELECT * FROM empleados";
         $query = mysqli_query($connection, $sql);
         while ($row = mysqli_fetch_array($query)){
             //$nameVend = "SELECT * FROM vendedores WHERE idVendedor = '".$row['Vendedores_idVendedor']."'";
             //$Vendedor = mysqli_fetch_array(mysqli_query($connection,$nameVend))
             ?>
                 <tr>
-                    <th class="table-primary"><?php echo $row['idVendedor'] ?></th>
-                    <th class="table-primary"><?php echo $row['Nombre'] ?></th>
-                    <th class="table-primary"><?php echo $row['Email'] ?></th>
-                    <th class="table-primary"><?php echo $row['Telefono'] ?></th>
-                    
-                    
-                    <br>
+                    <th class="table-primary"><?php echo $row['idEmpleado']?></th>
+                    <th class="table-primary"><?php echo $row['nombreEmp'] ?></th>
+                    <th class="table-primary"><?php echo $row['codigoEmp'] ?></th>
+                    <th class="table-primary"><?php echo $row['telEmp'] ?></th>
+                    <th class="table-primary"><?php echo $row['curpEmp'] ?></th>
+                   <th class="table-primary"><a class="btn btn-danger " href="EliEmpleados.php?idEmpleado=<?php echo $row['idEmpleado'] ?>">Eliminar</a><th>
+
                 </tr>
                 
             <?php
@@ -70,12 +73,14 @@
         </table>
             <a class="btn btn-dark m-3" href="../index.php">Salir</a>
 
-            <a class="btn btn-dark m-3" href="RegBitacora.php">Agregar Vendedor</a>
+            <a class="btn btn-dark m-3" href="RegEmpleados.php">Agregar Empleados</a>
+            
 
         </div>
         </div>
 </section>
     <!-- Fin contenido -->
+    <br>
 
 <?php
 include '../includes/footer.php'

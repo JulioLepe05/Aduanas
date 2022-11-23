@@ -1,6 +1,6 @@
 <section>
         <nav class="navbar navbar-dark bg-dark navbar-expand-sm pe-5 ps-5">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../src/logo.jpg" width="30" height="30" alt="logo" style="border-radius: 20px;">
                 Importaciones y Exportacion GJ
             </a>
@@ -14,9 +14,9 @@
                       Aduanas
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="aduanas/Documentacion.php">Documentación</a></li>
-                      <li><a class="dropdown-item" href="aduanas/Empleaddos.php">Registro de empleados</a></li>
-                      <li><a class="dropdown-item" href="aduanas/Bitacora.php">Bitacora</a></li>
+                      <li><a class="dropdown-item" href="../aduanas/Documentacion.php">Documentación</a></li>
+                      <li><a class="dropdown-item" href="../aduanas/Empleados.php">Registro de empleados</a></li>
+                      <li><a class="dropdown-item" href="../aduanas/Bitacora.php">Bitacora</a></li>
                     </ul>
                   </li>
                 <li class="nav-item dropdown">
@@ -24,9 +24,9 @@
                     Exportaciones
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="Exportaciones/Registro.php">Registro</a></li>
-                    <li><a class="dropdown-item" href="Exportaciones/Empleados.php">Empleados</a></li>
-                    <li><a class="dropdown-item" href="Exportacioes/Productos.php">Entrega de productos</a></li>
+                    <li><a class="dropdown-item" href="../Exportaciones/Registro.php">Registro</a></li>
+                    <li><a class="dropdown-item" href="../Exportaciones/Empleados.php">Empleados</a></li>
+                    <li><a class="dropdown-item" href="../Exportacioes/Productos.php">Entrega de productos</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -34,9 +34,9 @@
                     Importaciones
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="Importaciones/Registro.php">Registro</a></li>
-                    <li><a class="dropdown-item" href="Importaciones/Empleados.php">Empleado</a></li>
-                    <li><a class="dropdown-item" href="Importaciones/Productos.php">Entrega de productos</a></li>
+                    <li><a class="dropdown-item" href="../Importaciones/Registro.php">Registro</a></li>
+                    <li><a class="dropdown-item" href="../Importaciones/Empleados.php">Empleado</a></li>
+                    <li><a class="dropdown-item" href="../Importaciones/Productos.php">Entrega de productos</a></li>
                   </ul>
                 </li>
                

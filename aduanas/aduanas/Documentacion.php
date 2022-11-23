@@ -15,75 +15,45 @@
     <title>Importaciones y exportaciones</title>
 </head>
 <body>
-    <!-- Inicio Navbar -->
-    <section>
-        <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
-            <a class="navbar-brand" href="index.html">
-                <img src="../src/logo.jpg" width="30" height="30" alt="logo" style="border-radius: 20px;">
-                Importaciones y Exportacion GJ
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-list-5">
-                <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Registros
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="Aduanas.php">Aduanas</a></li>
-                    <li><a class="dropdown-item" href="Empleados.php">Empleados</a></li>
-                    <li><a class="dropdown-item" href="Importar.php">Empresa importera</a></li>
-                    <li><a class="dropdown-item" href="#">Empresa exportera</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contactanos</a>
-                </li>
-                
-                </ul>
-            </div>
-        </nav>
-    </section>
-    <!-- Fin Navbar -->
+   <!-- Inicio Navbar -->
+   <?php
+    include '../includes/navbar.php'
+    ?>
+    
+    <!-- Inicio contenido -->
 
     
     <!-- Inicio contenido -->
     <section>
 
-    <h3 class="text-center mt-4 pt-5">Registrar Venta</h3>
+    <h3 class="text-center mt-2 pt-3">Registrar Venta</h3>
 
 <div class=" container-xxl m-2"  >
 
 <div class="container d-flex justify-content-center align-items-center ">
 
-    <form class="row g-2 ms-5 me-5 ps-5 pe-5 " action="insertarEnVentas.php" method="POST">
-        Nombre Aduana: <input class="form-control" type="name" name="ICant1" id="ICant1">
-        Codigo: <input type="number" class="form-control" name="ICant2" id="ICant2">
-        RFC: <input class="form-control" type="name" name="ICant3" id="ICant3">
-        Ubicacion: <input class="form-control" type="name" name="ICant1" id="ICant1">
-        Peso Maximo recibido: <input type="number" class="form-control" name="ICant2" id="ICant2">
-        Codigo de registro: <input class="form-control" type="number" name="ICant3" id="ICant3">
-        <!--<div class="form-check">
-            <input class="form-check-input" type="checkbox" name="IComision" id="IComision">
-            <label class="form-check-label" for="flexCheckDefault">
-                Comision
-            </label>
-        </div>-->
+    <form class="row g-2 ms-5 me-5 ps-5 pe-5 " enctype="multipart/form-data"action="RegDocument.php" method="POST">
+    <!-- MAX_FILE_SIZE debe preceder al campo de entrada del fichero -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    Registro de empresa: <input name="doc1" type="file" />
 
-        <a class="btn btn-dark" href="main.php">Volver</a>
-        <input class="btn btn-secondary" type="submit" value="Registrar">
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    Permiso: <input name="doc2" type="file" />
+
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    Almacenamientos: <input name="doc3" type="file" />
+<br><br>
+
+    
+    <a class="btn btn-dark" href="../index.php">Volver</a>
+    <input class="btn btn-secondary" type="submit" value="Registrar">
+
+    </form>
+
         
         
-        </form>
-
+        </div>
+    </div>
 </section>
     <!-- Fin contenido -->
 

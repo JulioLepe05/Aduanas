@@ -1,24 +1,25 @@
 <?php
 
 
-$nombre = $_POST['nomAd'];
-$codigo = $_POST['Cod'];
-$producto = $_POST['Prod'];
-$numero = $_POST['Num'];
+$nombre = $_POST['NomEx'];
+$rfc = $_POST['rfcEx'];
+$trasnporte = $_POST['TransEx'];
+$sede = $_POST['SedeEx'];
 
 //echo "Email: $email". "Usuario: $username". "Contra: $contra ";
 
-//include '../DB/DB1.php';
+//include '../DB/DB2.php';
 include '../DB/Local.php';
+
 
 if($connection->connect_error){
     die("Falló la conexión: ". $connect_error);
 }
-$sql = "INSERT INTO bitacora (nombreBit, codigoBit, productoBit, numeroBit) VALUES ('$nombre', '$codigo', '$producto', '$numero')";
+$sql = "INSERT INTO Registro (nombreExp, rfcExp, TranspExp, sedeExp) VALUES ('$nombre', '$rfc', '$transporte', '$sede')";
 
 if($connection->query($sql)== TRUE){
     echo "Nuevo registro agregado exitosamente!";
-    header('Location: Bitacora.php');
+    header('Location: Registro.php');
 }else{
     echo "Error: " . $sql . "<br>" . $connection->error;
 }

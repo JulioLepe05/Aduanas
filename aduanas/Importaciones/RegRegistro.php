@@ -23,17 +23,17 @@
     <!-- Inicio contenido -->
     <section>
 
-    <h3 class="text-center mt-4 pt-5">Registrar bitacora</h3>
+    <h3 class="text-center mt-4 pt-5">Registrar Empresa</h3>
 
 <div class=" container-xxl m-2"  >
 
 <div class="container d-flex justify-content-center align-items-center ">
 
-    <form class="row g-2 ms-5 me-5 ps-5 pe-5 " action="RegEnBitacora.php" method="POST">
-        Nombre Aduana: <input class="form-control" type="name" name="nomAd" id="nomAd">
-        Codigo: <input type="number" class="form-control" name="Cod" id="Cod">
-        Producto: <input class="form-control" type="name" name="Prod" id="Prod">
-        Número: <input class="form-control" type="name" name="Num" id="Num">
+    <form class="row g-2 ms-5 me-5 ps-5 pe-5 " action="RegEnRegistro.php" method="POST">
+        Nombre empresa: <input class="form-control" type="name" name="NomEx" id="NomEx">
+        RFC: <input type="number" class="form-control" name="rfcEx" id="rfcEx">
+        Transporte: <input class="form-control" type="name" name="TransEx" id="TransEx">
+        Sede Principal: <input class="form-control" type="name" name="SedeEx" id="SedeEx">
         <!--<div class="form-check">
             <input class="form-check-input" type="checkbox" name="IComision" id="IComision">
             <label class="form-check-label" for="flexCheckDefault">
@@ -41,7 +41,7 @@
             </label>
         </div>-->
 
-        <a class="btn btn-dark" href="Bitacora.php">Volver</a>
+        <a class="btn btn-dark" href="Registro.php">Volver</a>
         <input class="btn btn-secondary" type="submit" value="Registrar">
         
         

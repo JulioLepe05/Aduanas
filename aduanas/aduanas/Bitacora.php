@@ -23,7 +23,7 @@
     <!-- Inicio contenido -->
   
 
-<h3 class="text-center mt-5 pt-5">Vendedores</h3>
+<h3 class="text-center mt-5 pt-5">Bitacora</h3>
     
     <div class="container d-flex  justify-content-center align-items-center ">
 
@@ -42,7 +42,8 @@
 <tbody>
 
 <?php
-        $connection = mysqli_connect("sql100.byethost12.com", "b12_33055949", "0512200", "b12_33055949_aduana");
+        //include '../DB/DB1.php';
+        include '../DB/Local.php';
         if($connection->connect_error){
             die("conexion fallda: ". $conn->connect_error);
         }
@@ -78,7 +79,9 @@
         </div>
 </section>
     <!-- Fin contenido -->
-
+<br>
+<br>
+<br>
 <?php
 include '../includes/footer.php'
 ?>
